@@ -11,3 +11,7 @@
     /* use this if an ERROR code was returned */
     color: red;
 }
+
+#itunes-results {
+    text-align: left;
+}

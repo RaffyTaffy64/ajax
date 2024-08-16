@@ -9,7 +9,7 @@ function showDogPhoto(evt) {
     document.querySelector("#dog-image").innerHTML = `<img src=${imgUrl}>`;
   })
 }
-  document.querySelector('#get-dog-image').addEventListener('click', showDogPhoto);
+document.querySelector('#get-dog-image').addEventListener('click', showDogPhoto);
   // TODO: get a random photo from the Dog API and show it in the #dog-image div
 
 
@@ -21,9 +21,9 @@ async function showWeather(evt) {
   const response = await axios.get(url);
   document.querySelector("#weather-info").innerText = response.data;
 }
+document.querySelector('#weather-button').addEventListener('click', showWeather);
   // TODO: request weather with that URL and show the forecast in #weather-info
 
-document.querySelector('#weather-button').addEventListener('click', showWeather);
 
 // PART 3: Order Cookies
 
@@ -44,9 +44,8 @@ document.querySelector('#weather-button').addEventListener('click', showWeather)
     }
     else {
       orderStatusDiv.classList.remove('order-error');
-    }
-  }
-
+   }
+}
 document.querySelector('#order-form').addEventListener('submit', orderCookies);
   // TODO: Need to preventDefault here, because we're listening for a submit event!
   // TODO: show the result message after your form
